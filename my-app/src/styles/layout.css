@@ -1,23 +1,50 @@
-
-/* .background-body{
-    height: 100vh;
-    background: #12343b;
-} */
-
-/* Add this CSS to your global styles or the corresponding CSS file */
 .background-body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation: gradientShift 15s ease infinite;
+  background-image: linear-gradient(
+    325deg,
+    hsl(189deg 41% 23%) 0%,
+    hsl(187deg 41% 20%) 4%,
+    hsl(184deg 40% 17%) 9%,
+    hsl(180deg 40% 15%) 15%,
+    hsl(176deg 42% 13%) 23%,
+    hsl(177deg 42% 13%) 34%,
+    hsl(183deg 42% 15%) 48%,
+    hsl(188deg 43% 18%) 65%,
+    hsl(191deg 43% 21%) 83%,
+    hsl(193deg 44% 24%) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  -webkit-animation: AnimationName 29s ease infinite;
+  -moz-animation: AnimationName 29s ease infinite;
+  animation: AnimationName 29s ease infinite;
+}
+
+.primary-topbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #12343b;
-  margin-top: 15px !important;
+  top: 2%;
+  position: absolute;
 }
 
 .navbar {
-  padding: 10px;
+  padding: 6px 4px !important;
   border-radius: 50px;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: hsla(0, 0%, 98%, 0.3);
 }
 
 .nav-item-container {
@@ -30,42 +57,39 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 33.33%; /* Assuming three equal tabs */
+  width: 30%;
   background-color: #fff;
   border-radius: 30px;
-  transition: transform 0.6s ease; /* Slow down the transition */
+  transition: transform 0.6s ease;
   z-index: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-item-background.All {
-  transform: translateX(0%);
+  transform: translateX(2%);
 }
 
 .nav-item-background.About {
-  transform: translateX(100%);
+  transform: translateX(113%);
 }
 
 .nav-item-background.Work {
-  transform: translateX(200%);
+  transform: translateX(226%);
 }
 
 .nav-item {
   flex: 1;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   color: #000;
-  z-index: 1; /* Make sure text is above the background */
+  z-index: 1;
   position: relative;
   border-radius: 30px;
-  transition: color 0.3s ease;
+  margin: 0 6px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.nav-item:not(.active):hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.nav-item.active {
-  color: #000;
+.nav-item-active-text {
+  color: #658c98 !important;
 }

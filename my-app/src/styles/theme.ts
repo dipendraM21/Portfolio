@@ -1,14 +1,14 @@
-import type { Theme } from 'theme-ui'
+import type { Theme } from "theme-ui";
 
 export const theme: Theme = {
   fonts: {
-    ubuntu: 'Ubuntu',
-    Inter: 'Inter',
-    roboto: 'Roboto',
-    notoSans: 'Noto Sans',
-    openSans: 'Open Sans',
-    poppins: 'Poppins',
-    hind: 'Hind',
+    ubuntu: "Ubuntu",
+    Inter: "Inter",
+    roboto: "Roboto",
+    notoSans: "Noto Sans",
+    openSans: "Open Sans",
+    poppins: "Poppins",
+    hind: "Hind",
   },
   fontWeights: {
     light: 300,
@@ -19,4 +19,45 @@ export const theme: Theme = {
     extraBold: 900,
     large: 950,
   },
-}
+  colors: {
+    primary: "#297189",
+    primaryText: "#303030",
+    secondary: "#00C6B7",
+    secondary20: "rgba(0, 198, 183, 0.20)",
+    tertiary: "#DEF0F6",
+    accentColor1: "#2174D4",
+    accentColor2: "#FD3A3A",
+    accentColor60: "rgba(253, 58, 58, 0.9)",
+    accent: "#658C98",
+    accentFlag: "#EB0B0B",
+    accentStatus: "#FFE5A0",
+    accentPrice: "#097AFD",
+    neutral: "#EAEAEA",
+    neutral3: "#DBE3E8",
+    neutral6: "#F2F2F2",
+    neutral7: "#EEEEEE",
+    neutralGrey: "#A6A6A6",
+    white: "#FFFFFF",
+    black: "#000",
+    grey1: "#F1F1F1",
+    grey2: "#737373",
+    muted: "#858585",
+    black2: "#222",
+  },
+  text: {
+    Primary16Medium125: {
+      fontFamily: "poppins",
+      fontWeight: "medium",
+      fontSize: 16,
+      lineHeight: "125%",
+      color: "primaryText",
+    },
+    Primary18Medium125: {
+      fontFamily: "poppins",
+      fontWeight: "medium",
+      fontSize: 17,
+      lineHeight: "125%",
+      color: "#ff8928",
+    },
+  },
+};

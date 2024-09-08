@@ -1,0 +1,28 @@
+.custom-cursor {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1); /* Outer circle */
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000; /* Central dot */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Additional styling for hover effects */
+.hoverable:hover ~ .custom-cursor {
+  background-color: rgba(0, 0, 0, 0.3); /* Darken cursor on hover */
+  transform: scale(1.5);
+}

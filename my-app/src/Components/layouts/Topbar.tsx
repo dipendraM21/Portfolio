@@ -1,37 +1,63 @@
 "use client";
 import { translation } from "@/utils/translations";
-import React, { useState } from "react";
-import { Box } from "theme-ui";
+import { useState } from "react";
+import { Box, Text } from "theme-ui";
 
 const PrimaryTopbar = () => {
   const [activeTab, setActiveTab] = useState<string>(translation?.ALL);
-
-  const handleTabClick = (tabName:string) => {
+  const handleTabClick = (tabName: string) => {
     setActiveTab(tabName);
   };
-
   return (
-    <Box as="div" className="background-body">
-      <Box as="div" className="navbar d-flex justify-content-center">
+    <Box as="div" className="primary-topbar">
+      <Box
+        as="div"
+        className="navbar d-flex justify-content-center"
+        // sx={{ background: "whitesmoke" }}
+      >
         <div className="nav-item-container">
           <div className={`nav-item-background ${activeTab}`}></div>
           <div
             className={`nav-item ${activeTab === "All" ? "active" : ""}`}
             onClick={() => handleTabClick("All")}
           >
-            {translation?.ALL}
+            <Text
+              variant={`${
+                activeTab === "All"
+                  ? "Primary18Medium125"
+                  : "Primary16Medium125"
+              }`}
+            >
+              {translation?.ALL}
+            </Text>
           </div>
           <div
             className={`nav-item ${activeTab === "About" ? "active" : ""}`}
             onClick={() => handleTabClick("About")}
           >
-             {translation?.ABOUT}
+            <Text
+              variant={`${
+                activeTab === "About"
+                  ? "Primary18Medium125"
+                  : "Primary16Medium125"
+              }`}
+            >
+              {translation?.ABOUT}
+            </Text>
           </div>
           <div
             className={`nav-item ${activeTab === "Work" ? "active" : ""}`}
             onClick={() => handleTabClick("Work")}
           >
-            {translation?.WORK}
+            <Text
+              variant={`${
+                activeTab === "Work"
+                  ? "Primary18Medium125"
+                  : "Primary16Medium125"
+              }`}
+            >
+              {translation?.WORK}
+            </Text>
           </div>
         </div>
       </Box>

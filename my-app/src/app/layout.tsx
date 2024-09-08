@@ -1,8 +1,8 @@
+import { Bootstrap } from "@/bootstrap/Bootstrap";
+import ThemeProvider from "@/providers/theme-ui-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import ThemeProvider from "@/providers/theme-ui-provider";
-import { Bootstrap } from "@/bootstrap/Bootstrap";
-import '../styles/layout.css'
+import "../styles/layout.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -37,11 +37,11 @@ export default async function RootLayout({
             crossOrigin=""
           />
         </head>
-        <body>
-              <Bootstrap />
-              {children}
+        <body className="background-body">
+          <Bootstrap />
+          {children}
         </body>
       </ThemeProvider>
     </html>
-  )
+  );
 }
