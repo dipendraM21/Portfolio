@@ -4,6 +4,7 @@ import ThemeProvider from "@/providers/theme-ui-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/layout.css";
+import "../styles/resume.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

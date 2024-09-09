@@ -1,0 +1,20 @@
+:root {
+  --token-d439dfe7-64eb-46c1-94f6-6b30f3e4ab01: rgb(255, 255, 255);
+}
+
+.resume-card-container {
+  place-content: center flex-start;
+  align-items: center;
+  background-color: var(--token-d439dfe7-64eb-46c1-94f6-6b30f3e4ab01, #ffffff);
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 50px 0px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row;
+  gap: 10px;
+  height: min-content;
+  overflow: visible;
+  padding: 32px;
+  position: relative;
+  width: 100%;
+}
