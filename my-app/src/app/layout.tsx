@@ -1,4 +1,5 @@
 import { Bootstrap } from "@/bootstrap/Bootstrap";
+import PrimaryTopbar from "@/Components/layouts/Topbar";
 import ThemeProvider from "@/providers/theme-ui-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -39,6 +40,7 @@ export default async function RootLayout({
         </head>
         <body className="background-body">
           <Bootstrap />
+          <PrimaryTopbar />
           {children}
         </body>
       </ThemeProvider>

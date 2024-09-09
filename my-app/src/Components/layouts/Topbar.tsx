@@ -1,64 +1,50 @@
 "use client";
+import { appRoutes } from "@/utils/routes";
 import { translation } from "@/utils/translations";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Box, Text } from "theme-ui";
 
 const PrimaryTopbar = () => {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState<string>(translation?.ALL);
-  const handleTabClick = (tabName: string) => {
+
+  const tabData = [
+    { name: "All", label: translation?.ALL, route: appRoutes.home },
+    { name: "About", label: translation?.ABOUT, route: appRoutes.about },
+    { name: "Work", label: translation?.WORK, route: appRoutes.work },
+    { name: "Resume", label: translation?.RESUME, route: appRoutes.resume },
+  ];
+
+  const handleTabClick = (tabName: string, route?: string) => {
     setActiveTab(tabName);
+    if (route) {
+      router.push(route);
+    }
   };
+
   return (
     <Box as="div" className="primary-topbar">
-      <Box
-        as="div"
-        className="navbar d-flex justify-content-center"
-        // sx={{ background: "whitesmoke" }}
-      >
+      <Box as="div" className="navbar d-flex justify-content-center">
         <div className="nav-item-container">
           <div className={`nav-item-background ${activeTab}`}></div>
-          <div
-            className={`nav-item ${activeTab === "All" ? "active" : ""}`}
-            onClick={() => handleTabClick("All")}
-          >
-            <Text
-              variant={`${
-                activeTab === "All"
-                  ? "Primary18Medium125"
-                  : "Primary16Medium125"
-              }`}
+          {tabData.map((tab) => (
+            <div
+              key={tab.name}
+              className={`nav-item ${activeTab === tab.name ? "active" : ""}`}
+              onClick={() => handleTabClick(tab.name, tab.route)}
             >
-              {translation?.ALL}
-            </Text>
-          </div>
-          <div
-            className={`nav-item ${activeTab === "About" ? "active" : ""}`}
-            onClick={() => handleTabClick("About")}
-          >
-            <Text
-              variant={`${
-                activeTab === "About"
-                  ? "Primary18Medium125"
-                  : "Primary16Medium125"
-              }`}
-            >
-              {translation?.ABOUT}
-            </Text>
-          </div>
-          <div
-            className={`nav-item ${activeTab === "Work" ? "active" : ""}`}
-            onClick={() => handleTabClick("Work")}
-          >
-            <Text
-              variant={`${
-                activeTab === "Work"
-                  ? "Primary18Medium125"
-                  : "Primary16Medium125"
-              }`}
-            >
-              {translation?.WORK}
-            </Text>
-          </div>
+              <Text
+                variant={`${
+                  activeTab === tab.name
+                    ? "Primary18Medium125"
+                    : "Primary16Medium125"
+                }`}
+              >
+                {tab.label}
+              </Text>
+            </div>
+          ))}
         </div>
       </Box>
     </Box>

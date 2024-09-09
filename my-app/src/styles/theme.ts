@@ -43,6 +43,7 @@ export const theme: Theme = {
     grey2: "#737373",
     muted: "#858585",
     black2: "#222",
+    orange: "#ff8928",
   },
   text: {
     Primary16Medium125: {
@@ -50,7 +51,7 @@ export const theme: Theme = {
       fontWeight: "medium",
       fontSize: 16,
       lineHeight: "125%",
-      color: "primaryText",
+      color: "white",
     },
     Primary18Medium125: {
       fontFamily: "poppins",
