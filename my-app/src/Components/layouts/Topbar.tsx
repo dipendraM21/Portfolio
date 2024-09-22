@@ -1,54 +1,70 @@
-"use client";
-import { appRoutes } from "@/utils/routes";
-import { translation } from "@/utils/translations";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
-import { Box, Text } from "theme-ui";
+import { Text } from "theme-ui";
 
-const PrimaryTopbar = () => {
-  const router = useRouter();
-  const [activeTab, setActiveTab] = useState<string>(translation?.ALL);
+const navItems = [
+  { name: "Home", href: "#" },
+  { name: "Works", href: "#" },
+  { name: "About", href: "#" },
+  { name: "Resume", href: "#" },
+];
 
-  const tabData = [
-    { name: "All", label: translation?.ALL, route: appRoutes.home },
-    { name: "About", label: translation?.ABOUT, route: appRoutes.about },
-    { name: "Work", label: translation?.WORK, route: appRoutes.work },
-    { name: "Resume", label: translation?.RESUME, route: appRoutes.resume },
-  ];
-
-  const handleTabClick = (tabName: string, route?: string) => {
-    setActiveTab(tabName);
-    if (route) {
-      router.push(route);
-    }
+const CustomNavbar = () => {
+  const [activeNavItem, steActiveNavItems] = useState("Home");
+  const handleClickTetx = (text: string) => {
+    steActiveNavItems(text);
   };
+  console.log("check18", activeNavItem);
 
   return (
-    <Box as="div" className="primary-topbar">
-      <Box as="div" className="navbar d-flex justify-content-center">
-        <div className="nav-item-container">
-          <div className={`nav-item-background ${activeTab}`}></div>
-          {tabData.map((tab) => (
-            <div
-              key={tab.name}
-              className={`nav-item ${activeTab === tab.name ? "active" : ""}`}
-              onClick={() => handleTabClick(tab.name, tab.route)}
-            >
-              <Text
-                variant={`${
-                  activeTab === tab.name
-                    ? "Primary18Medium125"
-                    : "Primary16Medium125"
-                }`}
-              >
-                {tab.label}
-              </Text>
-            </div>
-          ))}
+    <nav className="navbar navbar-expand-lg p-0">
+      <div className="container py-3 d-flex align-items-center justify-content-between">
+        <Link href="/" className="navbar-brand">
+          <Image src="" alt="logo" className="logo" />
+        </Link>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mx-auto nav-item-flex-container  list-unstyled mb-0 justify-content-center">
+            {navItems.map((item, key) => (
+              <li className="nav-item" key={key}>
+                <Link href={item.href} className="text-decoration-none">
+                  <Text
+                    variant={
+                      activeNavItem === item?.name
+                        ? "Secondary16Demi125"
+                        : "Secondary16Medium125"
+                    }
+                    onClick={() => {
+                      handleClickTetx(item?.name);
+                    }}
+                  >
+                    {item.name}
+                  </Text>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="d-flex justify-content-end mt-2 mt-lg-0">
+            <button className="btn btn-dark">Get in touch</button>
+          </div>
         </div>
-      </Box>
-    </Box>
+      </div>
+    </nav>
   );
 };
 
-export default PrimaryTopbar;
+export default CustomNavbar;

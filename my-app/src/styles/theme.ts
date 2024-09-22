@@ -9,6 +9,9 @@ export const theme: Theme = {
     openSans: "Open Sans",
     poppins: "Poppins",
     hind: "Hind",
+    lato: "Lato",
+    // font-family: "Lato", sans-serif;
+    // font-family: "Open Sans", sans-serif;
   },
   fontWeights: {
     light: 300,
@@ -21,6 +24,7 @@ export const theme: Theme = {
   },
   colors: {
     primary: "#297189",
+    orange: "#f1b43e",
     primaryText: "#303030",
     secondary: "#00C6B7",
     secondary20: "rgba(0, 198, 183, 0.20)",
@@ -43,7 +47,6 @@ export const theme: Theme = {
     grey2: "#737373",
     muted: "#858585",
     black2: "#222",
-    orange: "#ff8928",
   },
   text: {
     Primary16Medium125: {
@@ -59,6 +62,23 @@ export const theme: Theme = {
       fontSize: 17,
       lineHeight: "125%",
       color: "#ff8928",
+    },
+    Secondary16Medium125: {
+      fontFamily: "notoSans",
+      fontWeight: "medium",
+      fontSize: 16,
+      lineHeight: "125%",
+      color: "#727272",
+      "&:hover": {
+        color: "orange",
+      },
+    },
+    Secondary16Demi125: {
+      fontFamily: "notoSans",
+      fontWeight: "demi",
+      fontSize: 16,
+      lineHeight: "125%",
+      color: "orange",
     },
   },
 };
