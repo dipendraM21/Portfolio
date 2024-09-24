@@ -10,8 +10,9 @@ export const theme: Theme = {
     poppins: "Poppins",
     hind: "Hind",
     lato: "Lato",
-    // font-family: "Lato", sans-serif;
-    // font-family: "Open Sans", sans-serif;
+    familjenGrotesk: "Familjen Grotesk",
+    schibstedGrotesk: "Schibsted Grotesk",
+    dmSans: "DM Sans",
   },
   fontWeights: {
     light: 300,
@@ -64,8 +65,8 @@ export const theme: Theme = {
       color: "#ff8928",
     },
     Secondary16Medium125: {
-      fontFamily: "notoSans",
-      fontWeight: "medium",
+      fontFamily: "schibstedGrotesk",
+      fontWeight: "demi",
       fontSize: 16,
       lineHeight: "125%",
       color: "#727272",
@@ -79,6 +80,41 @@ export const theme: Theme = {
       fontSize: 16,
       lineHeight: "125%",
       color: "orange",
+    },
+    DMSans28SemiBold125: {
+      fontFamily: "dmSans",
+      fontWeight: "semiBold",
+      fontSize: 28,
+      lineHeight: "125%",
+      fontStyle: "normal",
+      color: "orange",
+      letterSpacing: "-1px",
+    },
+  },
+  buttons: {
+    primary: {
+      background: "rgb(50, 50, 50)",
+      padding: "10px 20px",
+      borderRadius: "100px",
+      fontSize: [16, 16, 16, 16, 16, 18, 18],
+      lineHeight: ["20px"],
+      fontFamily: "notoSans",
+      fontWeight: "medium",
+      color: "white",
+      ":hover": {
+        background: "orange",
+      },
+      ":focus": {
+        border: "1px solid #00C6B7",
+      },
+      ":active": {
+        backgroundColor: "secondary",
+      },
+      ":disabled": {
+        backgroundColor: "#EEEEEE",
+        color: "#A6A6A6",
+        cursor: "not-allowed",
+      },
     },
   },
 };

@@ -1,5 +1,5 @@
 .mt-95 {
-  margin-top: 95px !important;
+  margin-top: 30px !important;
 }
 .p-30 {
   padding: 30px;
@@ -16,3 +16,12 @@
   background-color: rgba(255, 255, 255, 0.5);
   z-index: 1000;
 }
+    /* --framer-font-style: normal;
+    --framer-font-weight: 700;
+    --framer-letter-spacing: -2px;
+    --framer-line-height: 1.2em;
+    --framer-paragraph-spacing: 40px;
+    --framer-text-alignment: start;
+    --framer-text-color: var(--token-c32cb2fb-f5d0-4f2f-a424-978ac4dfff95, #323232);
+    --framer-text-decoration: none;
+    --framer-text-transform: none; */

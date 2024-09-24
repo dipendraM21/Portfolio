@@ -9,10 +9,10 @@
   grid-row-gap: 48px;
   background-color: var(--color--oxfolrdblue--0200);
   color: var(--color--oxfolrdblue--050);
-  border-radius: 32px;
+  border-radius: 24px;
   flex-flow: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 40px;
+  padding: 32px;
   display: flex;
 }

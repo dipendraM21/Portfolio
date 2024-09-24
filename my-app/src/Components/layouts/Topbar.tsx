@@ -1,21 +1,34 @@
+import { formatPath } from "@/utils/formatPathName";
+import { translation } from "@/utils/translations";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Text } from "theme-ui";
+import { ThemeButton } from "../core/Button/ThemeButton";
 
 const navItems = [
   { name: "Home", href: "#" },
-  { name: "Works", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Resume", href: "#" },
+  { name: "Work", href: "/work" },
+  { name: "About", href: "/about" },
+  { name: "Resume", href: "/resume" },
 ];
 
 const CustomNavbar = () => {
-  const [activeNavItem, steActiveNavItems] = useState("Home");
+  const pathname = usePathname();
+  const currentPath = formatPath(pathname);
+  const [activeNavItem, steActiveNavItems] = useState<string | null>(
+    "Home" || pathname
+  );
   const handleClickTetx = (text: string) => {
     steActiveNavItems(text);
   };
-  console.log("check18", activeNavItem);
+
+  useEffect(() => {
+    if (currentPath) {
+      steActiveNavItems(currentPath);
+    }
+  }, [currentPath]);
 
   return (
     <nav className="navbar navbar-expand-lg p-0">
@@ -37,7 +50,7 @@ const CustomNavbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto nav-item-flex-container  list-unstyled mb-0 justify-content-center">
+          <ul className="navbar-nav mx-auto nav-item-flex-container list-unstyled mb-0 justify-content-center">
             {navItems.map((item, key) => (
               <li className="nav-item" key={key}>
                 <Link href={item.href} className="text-decoration-none">
@@ -59,7 +72,7 @@ const CustomNavbar = () => {
           </ul>
 
           <div className="d-flex justify-content-end mt-2 mt-lg-0">
-            <button className="btn btn-dark">Get in touch</button>
+            <ThemeButton variant="primary" text={translation?.GET_IN_TOUCH} />
           </div>
         </div>
       </div>

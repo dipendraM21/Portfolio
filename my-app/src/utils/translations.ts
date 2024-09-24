@@ -3,6 +3,7 @@ export interface translation_Props {
   ABOUT: string;
   WORK: string;
   RESUME: string;
+  GET_IN_TOUCH: string;
 }
 
 export const translation: translation_Props = {
@@ -10,4 +11,5 @@ export const translation: translation_Props = {
   ABOUT: "About",
   WORK: "Work",
   RESUME: "Resume",
+  GET_IN_TOUCH: "Get in touch",
 };
