@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeCard from "./resumeCard";
+import ResumeCard from "./ResumeCard";
 import SocialLinkCard from "./SocialLinkCard";
 import { div } from "framer-motion/client";
 

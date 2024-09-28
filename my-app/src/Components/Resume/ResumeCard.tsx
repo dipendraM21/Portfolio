@@ -9,12 +9,15 @@ const ResumeCard = () => {
       <Box as="div" className="resume-card-flex-container">
         <Text variant="DMSans28SemiBold125">{translation?.FULL_NAME}</Text>
         <Text variant="DMSans26Medium125">{translation?.UI_UX_DESIGNER}</Text>
-      </Box> 
-       <Box as="div" className="resume-card-flex-container">
+      </Box>
+      <Box as="div" className="resume-card-flex-container">
         <Text variant="DMSans22SemiBold125">{translation?.EMAIL_ID}</Text>
         <Text variant="DMSans22Medium125">www.uibyjames.com</Text>
       </Box>
-      <ThemeButton variant="downLoadResumeBtn" text={translation?.DOWNLOAD_RESUME} />
+      <ThemeButton
+        variant="downLoadResumeBtn"
+        text={translation?.DOWNLOAD_RESUME}
+      />
     </Card>
   );
 };
