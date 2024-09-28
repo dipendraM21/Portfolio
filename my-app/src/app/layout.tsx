@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import { Bootstrap } from "@/bootstrap/Bootstrap";
 import { DefaultPage } from "@/Components/defaultPage/DefaultPage";
 import ThemeProvider from "@/providers/theme-ui-provider";
@@ -7,6 +8,7 @@ import { Inter } from "next/font/google";
 import "../styles/global.css";
 import "../styles/layout.css";
 import "../styles/resume.css";
+import "../styles/custom-container.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,10 +32,8 @@ export default async function RootLayout({
             href="https://fonts.gstatic.com"
             crossOrigin=""
           />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
             rel="stylesheet"
           ></link>
           <link
@@ -41,6 +41,9 @@ export default async function RootLayout({
             rel="stylesheet"
           ></link>
           <link
+            href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+          /><link
             href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
             rel="stylesheet"
           />
@@ -54,6 +57,17 @@ export default async function RootLayout({
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossOrigin=""
           />
+          {/* New Fonts */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+            rel="stylesheet"
+          ></link>
         </head>
         <body>
           <Bootstrap />

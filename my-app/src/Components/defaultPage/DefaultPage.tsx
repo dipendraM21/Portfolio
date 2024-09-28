@@ -9,9 +9,13 @@ export const DefaultPage = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="background-body">
-      <CustomNavbar />
-      <Box className="custom-scroll mt-95">{children}</Box>
-    </div>
+    <>
+      <div className="background-body">
+        <CustomNavbar />
+        <div className="custom-container">
+          <Box className="custom-scroll">{children}</Box>
+        </div>
+      </div>
+    </>
   );
 };

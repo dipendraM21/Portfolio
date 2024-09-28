@@ -1,9 +1,9 @@
-import ResumeCard from "@/Components/Resume/resumeCard";
+import LandingPage from '../../Components/Resume/landingPage';
 
 export default function Resume() {
   return (
     <>
-      <ResumeCard />
+      <LandingPage />
     </>
   );
 }

@@ -32,7 +32,7 @@ const CustomNavbar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg p-0">
-      <div className="container py-3 d-flex align-items-center justify-content-between">
+      <div className="nav-container py-3 d-flex align-items-center justify-content-between">
         <Link href="/" className="navbar-brand">
           <Image src="" alt="logo" className="logo" />
         </Link>

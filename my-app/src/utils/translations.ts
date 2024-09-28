@@ -4,6 +4,10 @@ export interface translation_Props {
   WORK: string;
   RESUME: string;
   GET_IN_TOUCH: string;
+  FULL_NAME: string;
+  UI_UX_DESIGNER: string;
+  EMAIL_ID: string;
+  DOWNLOAD_RESUME: string;
 }
 
 export const translation: translation_Props = {
@@ -12,4 +16,8 @@ export const translation: translation_Props = {
   WORK: "Work",
   RESUME: "Resume",
   GET_IN_TOUCH: "Get in touch",
+  FULL_NAME: "DipendraSinh Mahida",
+  UI_UX_DESIGNER: "UX Designer & Video Editor",
+  EMAIL_ID: "dipendrasinhm@gmail.com",
+  DOWNLOAD_RESUME: "Download Resume",
 };

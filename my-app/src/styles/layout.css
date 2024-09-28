@@ -4,13 +4,11 @@
 
 .background-body {
   margin: 0;
-  /* height: 100vh; */
   overflow: hidden;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   animation: gradientShift 15s ease infinite;
   background: radial-gradient(ellipse at bottom, #0a2549 0, #02041a 100%);
-  /* min-height: calc(100vh + 8rem); */
   -webkit-animation: AnimationName 29s ease infinite;
   -moz-animation: AnimationName 29s ease infinite;
   animation: AnimationName 29s ease infinite;

@@ -5,14 +5,109 @@
 }
 
 .resume-card-container {
-  grid-column-gap: 48px;
-  grid-row-gap: 48px;
-  background-color: var(--color--oxfolrdblue--0200);
-  color: var(--color--oxfolrdblue--050);
+  place-content: center flex-start;
+  background-color: var(--token-d439dfe7-64eb-46c1-94f6-6b30f3e4ab01, #ffffff);
   border-radius: 24px;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 50px 0px;
   padding: 32px;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+    rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+    translateZ(0px);
   display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.social-link-card-container {
+  place-content: flex-start flex-end;
+  background-color: var(--token-d439dfe7-64eb-46c1-94f6-6b30f3e4ab01, #ffffff);
+  border-radius: 24px;
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: column;
+  gap: 16px;
+  height: min-content;
+  padding: 0px;
+  position: relative;
+  width: 4px;
+}
+.resume-card-flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: column;
+  gap: 8px;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
+
+.resume-card-flex-bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: column;
+  gap: 8px;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
+.resume-social-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  flex: 1 0 0px;
+  flex-flow: column;
+  padding: 0px;
+}
+
+.resume-social-image {
+  width: 25px !important;
+  height: 25px !important;
+  color: #d3d1ccd9 !important;
+  position: relative;
+  top: 2px;
+  opacity: 2;
+  z-index: 1;
+}
+.resume-social-active-image {
+  width: 25px !important;
+  height: 25px !important;
+  color: white !important;
+  position: relative;
+  top: 6px;
+  opacity: 2;
+  z-index: 1;
+}
+.resume-card-divider {
+  color: #eaeaea !important;
+  opacity: 1;
+}
+.resume-social-icon {
+  width: 10%;
+  height: 38px;
+  border-radius: 100px;
+  background-color: #f3f2f2 !important;
+  display: flex;
+  justify-content: center;
+  border: 3px solid #d3d1ccd9;
+}
+
+.resume-social-icon-active {
+  width: 10%;
+  height: 38px;
+  border-radius: 100px;
+  background-color: #f1b43ed9 !important;
+  display: flex;
+  justify-content: center;
 }

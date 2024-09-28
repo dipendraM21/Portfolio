@@ -4,6 +4,9 @@
 .p-30 {
   padding: 30px;
 }
+.mt-24{
+  margin-top: 24px !important;
+}
 .spinner {
   position: fixed;
   top: 0;
