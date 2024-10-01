@@ -58,7 +58,7 @@ const CustomNavbar = () => {
                     variant={
                       activeNavItem === item?.name
                         ? "Secondary16Demi125"
-                        : "Secondary16Medium125"
+                        : "Montserrat16Medium125"
                     }
                     onClick={() => {
                       handleClickTetx(item?.name);

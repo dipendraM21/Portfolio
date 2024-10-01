@@ -1,0 +1,38 @@
+.footer-text-area {
+  background-color: transparent !important;
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+}
+.footer-social-group {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  cursor: pointer;
+}
+.footer-container {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 40px;
+  height: min-content;
+  justify-content: flex-start;
+  padding: 16px 40px 0;
+  position: relative;
+}
+
+.footer-social-icon-linkedin,
+.footer-social-icon-x,
+.footer-social-icon-github {
+  color: #bcbab3d9;
+  transition: color 0.3s ease;
+}
+
+.footer-social-icon-linkedin:hover,
+.footer-social-icon-x:hover,
+.footer-social-icon-github:hover {
+  color: rgb(241, 180, 62);
+}
+

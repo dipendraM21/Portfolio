@@ -68,9 +68,19 @@ export const theme: Theme = {
       lineHeight: "125%",
       color: "#ff8928",
     },
-    Secondary16Medium125: {
-      fontFamily: "schibstedGrotesk",
+    Montserrat16Medium125: {
+      fontFamily: "Montserrat",
       fontWeight: "demi",
+      fontSize: 16,
+      lineHeight: "125%",
+      color: "#727272",
+      "&:hover": {
+        color: "orange",
+      },
+    },
+    Montserrat15Medium125: {
+      fontFamily: "Montserrat",
+      fontWeight: "medium",
       fontSize: 16,
       lineHeight: "125%",
       color: "#727272",
@@ -121,13 +131,21 @@ export const theme: Theme = {
       color: "orange",
       letterSpacing: "--1.5px",
     },
+    DMSans16Medium125: {
+      fontFamily: "dmSans",
+      fontWeight: "medium",
+      fontSize: 16,
+      lineHeight: "125%",
+      color: "#bcbab3d9",
+      letterSpacing: "-1px",
+    },
   },
   buttons: {
     primary: {
       background: "rgb(50, 50, 50)",
       padding: "10px 20px",
       borderRadius: "100px",
-      outline:'unset',
+      outline: "unset",
       fontSize: [16, 16, 16, 16, 16, 18, 18],
       lineHeight: ["20px"],
       fontFamily: "notoSans",
@@ -161,7 +179,7 @@ export const theme: Theme = {
       letterSpacing: "-1px",
       fontWeight: "semiBold",
       maxWidth: "157px",
-      outline:'unset',
+      outline: "unset",
       color: "white",
       ":hover": {
         background: "orange",

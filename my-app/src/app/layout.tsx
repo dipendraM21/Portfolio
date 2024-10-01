@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/global.css";
 import "../styles/layout.css";
+import "../styles/footer.css";
 import "../styles/resume.css";
 import "../styles/custom-container.css";
 

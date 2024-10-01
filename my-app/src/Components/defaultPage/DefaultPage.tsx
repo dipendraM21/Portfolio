@@ -2,6 +2,7 @@
 
 import { Box } from "theme-ui";
 import CustomNavbar from "../layouts/Topbar";
+import FooterWeb from "../layouts/Footer";
 
 export const DefaultPage = ({
   children,
@@ -15,6 +16,7 @@ export const DefaultPage = ({
         <div className="custom-container">
           <Box className="custom-scroll">{children}</Box>
         </div>
+        <FooterWeb />
       </div>
     </>
   );
