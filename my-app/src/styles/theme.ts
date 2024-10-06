@@ -102,16 +102,16 @@ export const theme: Theme = {
       lineHeight: "125%",
       fontStyle: "normal",
       color: "#323232",
-      letterSpacing: "-2px",
+      letterSpacing: ["-1px", "-2px", "-2px", "-2px", "-2px"],
     },
     DMSans22SemiBold125: {
       fontFamily: "dmSans",
       fontWeight: "semiBold",
-      fontSize: 23,
+      fontSize: [20, 21, 22, 23, 23],
       lineHeight: "125%",
       fontStyle: "normal",
       color: "#727272",
-      letterSpacing: "-1.2px",
+      letterSpacing: ["-1px", "-1.1px", "-1.2px", "-1.2px", "-1.2px"],
     },
     DMSans22Medium125: {
       fontFamily: "dmSans",
@@ -125,11 +125,11 @@ export const theme: Theme = {
     DMSans26Medium125: {
       fontFamily: "dmSans",
       fontWeight: "medium",
-      fontSize: 26,
+      fontSize: [22, 24, 25, 26, 26],
       lineHeight: "125%",
       fontStyle: "normal",
       color: "orange",
-      letterSpacing: "--1.5px",
+      letterSpacing: ["-1.2px", "-1.5px", "-1.5px", "-1.5px", "-1.5px"],
     },
     DMSans16Medium125: {
       fontFamily: "dmSans",

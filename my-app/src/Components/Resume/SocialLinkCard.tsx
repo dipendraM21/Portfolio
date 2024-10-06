@@ -16,10 +16,11 @@ export default function SocialLinkCard() {
   };
 
   return (
-    <Card className="resume-card-container mt-24">
+    <Card className="resume-card-container">
       <Box as="div" className="resume-social-flex-container">
         {resumeSocialLinkData?.map((item, index) => {
           const isHovered = hoverIndex === index;
+          const isLastItem = index === resumeSocialLinkData.length - 1;
 
           return (
             <React.Fragment key={`resume-card-${index}`}>
@@ -45,7 +46,7 @@ export default function SocialLinkCard() {
                   )}
                 </Box>
               </Box>
-              <Divider className="resume-card-divider" />
+              {!isLastItem && <Divider className="resume-card-divider" />}
             </React.Fragment>
           );
         })}

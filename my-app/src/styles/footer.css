@@ -10,6 +10,12 @@
   justify-content: center;
   cursor: pointer;
 }
+.footer-social-rights {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  cursor: pointer;
+}
 .footer-container {
   align-content: center;
   align-items: center;
@@ -35,4 +41,3 @@
 .footer-social-icon-github:hover {
   color: rgb(241, 180, 62);
 }
-

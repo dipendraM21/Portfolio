@@ -19,6 +19,7 @@
   display: flex;
   gap: 24px;
   flex-direction: column;
+  margin-top: 24px !important;
 }
 
 .social-link-card-container {
@@ -112,33 +113,49 @@
   justify-content: center;
 }
 
-
-/* Ensure the parent row has enough height */
-.container-fluid {
-  height: 100vh; /* Full viewport height for scrolling */
-  overflow-y: auto; /* Allows the content to scroll */
-}
-
-/* Sticky container settings */
 .sticky-container {
   position: relative;
 }
 
 .sticky-card {
   position: sticky;
-  top: 20px; /* Adjust this value as per your need */
+  top: 20px;
   z-index: 10;
-  height: auto; /* Ensure it's auto so it adjusts based on content */
+  height: auto;
 }
 
-/* Hide scrollbar but keep scrollable */
 .content-scroll {
-  max-height: 100vh; /* Full viewport height */
-  overflow-y: scroll; /* Enable scrolling */
+  max-height: 100vh;
+  overflow-y: scroll;
 }
-
 
 .sticky-card {
   position: sticky;
-  top: 20px; /* Adjust based on your design */
+  top: 20px;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .sticky-card {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px !important;
+  }
+  .resume-card-container {
+    margin-top: 0px !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .resume-card-container {
+    gap: 18px !important;
+  }
+  .footer-text-area {
+    gap: 20px !important;
+  }
+  .footer-social-rights {
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 16px !important;
+  }
 }
