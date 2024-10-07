@@ -26,7 +26,7 @@ export default function LandingPage() {
           <SocialLinkCard />
         </div>
       </div>
-      <div className="col-xl-8 col-lg-6 col-12">
+      <div className="col-xl-8 col-lg-6 col-12 pl-34 ">
         <ResumeInfo />
       </div>
     </div>

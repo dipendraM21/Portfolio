@@ -134,6 +134,31 @@
   top: 20px;
 }
 
+.resume-content-container {
+  place-content: center flex-start;
+  display: flex;
+  flex: 1 0 0px;
+  flex-flow: column;
+  gap: 56px;
+  height: min-content;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  margin-top: 24px !important;
+}
+
+.about-us-container{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  flex-flow: column;
+  gap: 16px;
+  height: min-content;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+}
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .sticky-card {
     display: flex !important;
